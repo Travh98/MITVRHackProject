@@ -3,7 +3,7 @@ Quickly prototype Virtual Reality scenes using AI Object Detection on the Qualco
 
 Our ergonomic copy paste handheld tool allows the user to scan objects in the real world, detect and classify the scanned object, and send it to the virtual reality scene. As an added bonus, this device also keeps your hands warm in the cold! ❄
 
-Check out our [DevPost page](https://devpost.com/software/copy-paste-vr-ar-experience). This project was developed for the 2025 MIT Reality Hack event.
+Check out our [DevPost page](https://devpost.com/software/copy-paste-vr-ar-experience). This project was developed for the 2025 [MIT Reality Hack event](https://www.mitrealityhack.com/).
 
 ## Data Pipeline
 * 📷Qualcomm RB3 Gen 2 board scans the physical space like a handheld camera
