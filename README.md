@@ -1,4 +1,4 @@
-# Copy Paste VR Experience
+# Copy Paste VR/AR Experience
 Quickly prototype Virtual Reality scenes using AI Object Detection on the Qualcomm RB3 Gen 2 board.
 
 Our ergonomic copy paste handheld tool allows the user to scan objects in the real world, detect and classify the scanned object, and send it to the virtual reality scene.
@@ -44,7 +44,7 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 * Push the `run_detection.sh` onto the Qualcomm device using the `adb push` command
 * Run the `run_detection.sh` bash script to start the Qualcomm AI Object Detection
 * The script will pipe the AI detection data to the Redis Server
-* If you need to remove carriage returns `^M` run the sed command to remove them `sed 's/\r$//' run_detection.sh`
+* If you need to remove carriage returns `^M` run the sed command to remove them `sed -i 's/\r//g' <script name>`
 
 ### Setup the Redis Server
 * Make sure the Redis Server machine and the Qualcomm are connected on the same network
