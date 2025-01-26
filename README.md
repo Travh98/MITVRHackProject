@@ -53,7 +53,7 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 * `docker exec -it redis redis-cli` to enter the container, then `ifconfig` to get the ip of the container
 * Update start_sending_detections.sh to send the host to `127.0.0.1`
 * Verify Redis is working by running `redis-cli` then in the CLI, type `ping`. You should see `PONG`
-* Also to verify: `PSUBSCRIBE `
+* Also to verify: `PSUBSCRIBE Detection::yolonas::0`, if start_sending_detections2.sh is running on Qualcomm, you should be able to see incoming json data for the detections
 
 ### Setup the Unity Project
 * Download and build the Unity project
