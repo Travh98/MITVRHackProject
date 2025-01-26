@@ -1,7 +1,7 @@
 # Copy Paste VR/AR Experience
 Quickly prototype Virtual Reality scenes using AI Object Detection on the Qualcomm RB3 Gen 2 board.
 
-Our ergonomic copy paste handheld tool allows the user to scan objects in the real world, detect and classify the scanned object, and send it to the virtual reality scene.
+Our ergonomic copy paste handheld tool allows the user to scan objects in the real world, detect and classify the scanned object, and send it to the virtual reality scene. As an added bonus, this device also keeps your hands warm in the cold! ❄
 
 ## Data Pipeline
 * 📷Qualcomm RB3 Gen 2 board scans the physical space like a handheld camera
@@ -48,7 +48,7 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 
 ### Setup the Redis Server on the Qualcomm
 * `docker pull redis` on Qualcomm to pull the docker redis server image
-* `docker run --name redis --net host -p 6379:6379 --hostname redis -d redis:latest redis-server --loglevel notice` to run the docker Redis Server
+* `docker run --name redis --net host --hostname redis -d redis:latest redis-server --loglevel notice` to run the docker Redis Server
 * Make sure the Redis Server machine and the Qualcomm are connected on the same network
 * `docker exec -it redis redis-cli` to enter the container, then `ifconfig` to get the ip of the container
 * Update start_sending_detections.sh to send the host to `127.0.0.1`
