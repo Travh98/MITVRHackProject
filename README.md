@@ -40,7 +40,7 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 * Use `usbipd` to share the Window's USB-A port with the Window's WSL
 * In WSL Linux, ensure you can see the device with `adb devices`
 * Log into the Qualcomm's shell environment with `adb shell`
-* Connect the Qualcomm to the same network as the Redis Server machine
+* Connect the Qualcomm to the same network as the Redis Server machine `nmcli device wifi ...`
 * Push the `run_detection.sh` onto the Qualcomm device using the `adb push` command
 * Run the `run_detection.sh` bash script to start the Qualcomm AI Object Detection
 * The script will pipe the AI detection data to the Redis Server
