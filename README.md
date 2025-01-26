@@ -49,4 +49,11 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 ### Setup the Redis Server
 * Make sure the Redis Server machine and the Qualcomm are connected on the same network
 * With Redis installed on the machine, start Redis with `sudo service redis-server start`
-* 
+* Verify Redis is working by running `redis-cli` then in the CLI, type `ping`. You should see `PONG`
+
+### Setup the Unity Project
+* Download and build the Unity project
+* Connect the VR Headset or deploy the project to an XR device like a phone
+* Run the Unity executable
+* Connect to the Redis Server
+
