@@ -46,10 +46,14 @@ In WSL, start vscode from WSL, go to the Qualcomm extension and Application conf
 * The script will pipe the AI detection data to the Redis Server
 * If you need to remove carriage returns `^M` run the sed command to remove them `sed -i 's/\r//g' <script name>`
 
-### Setup the Redis Server
+### Setup the Redis Server on the Qualcomm
+* `docker pull redis` on Qualcomm to pull the docker redis server image
+* `docker run --name redis --net host -p 6379:6379 --hostname redis -d redis:latest redis-server --loglevel notice` to run the docker Redis Server
 * Make sure the Redis Server machine and the Qualcomm are connected on the same network
-* With Redis installed on the machine, start Redis with `sudo service redis-server start`
+* `docker exec -it redis redis-cli` to enter the container, then `ifconfig` to get the ip of the container
+* Update start_sending_detections.sh to send the host to `127.0.0.1`
 * Verify Redis is working by running `redis-cli` then in the CLI, type `ping`. You should see `PONG`
+* Also to verify: `PSUBSCRIBE `
 
 ### Setup the Unity Project
 * Download and build the Unity project
